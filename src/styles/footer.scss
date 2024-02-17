@@ -44,11 +44,19 @@
       @include media(from_laptop) {
         min-width: rem(200);
       }
+      @include media(mobile) {
+        &:not(:last-child) {
+          margin-bottom: rem(35);
+        }
+      }
     }
   }
   &__h4 {
     color: inherit;
     margin-bottom: rem(35);
+    @include media(mobile) {
+      margin-bottom: rem(20);
+    }
   }
   &__link {
     @extend %heading;
