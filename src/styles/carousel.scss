@@ -1,0 +1,61 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins/clearfix";
+@import "../../node_modules/bootstrap/scss/mixins/transition";
+@import "../../node_modules/bootstrap/scss/mixins/";
+@import "../../node_modules/bootstrap/scss/carousel";
+
+.carousel {
+  &-item {
+    transition: transform $trans-dur * 2 ease-in;
+  }
+  &-indicators {
+    margin-bottom: rem(30);
+    [data-bs-target] {
+      width: rem(50);
+      height: rem(5);
+      border: 0;
+      margin: 0 rem(5);
+      border-radius: rem(3);
+      opacity: 1;
+      transition: background-color $trans-dur;
+    }
+    .active {
+      background-color: $primary;
+    }
+  }
+  &-with-controls {
+    @include media(to_desktop) {
+      padding: 0 rem(120);
+    }
+    @include media(mobile) {
+      padding: 0 rem(90);
+    }
+  }
+  &-control {
+    &-prev,
+    &-next {
+      width: rem(71);
+      height: rem(71);
+      top: 50%;
+      margin-top: rem(-35.5);
+      background: url("images/svg/carousel-arrow.svg") center/cover;
+      opacity: 1;
+      cursor: pointer;
+    }
+    &-prev {
+      transform: rotate(180deg);
+    }
+    @include media(desktop) {
+      &-prev {
+        right: 100%;
+        left: auto;
+        margin-right: rem(170);
+      }
+      &-next {
+        left: 100%;
+        margin-left: rem(170);
+      }
+    }
+  }
+}

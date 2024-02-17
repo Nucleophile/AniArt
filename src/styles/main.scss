@@ -1,0 +1,160 @@
+.main-top-block {
+  color: #fff;
+  padding: rem(90) 0 rem(140);
+  text-align: center;
+  position: relative;
+  @include media(from_laptop) {
+    padding: rem(150) 0 rem(200);
+  }
+  @include media(desktop) {
+    padding: rem(244) 0 rem(315);
+  }
+  &-wrapper {
+    position: relative;
+  }
+  &__content {
+    max-width: rem(700);
+    margin: 0 auto;
+  }
+  &__h1 {
+    color: inherit;
+    margin: rem(12) 0 rem(30);
+  }
+  &-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &__carousel,
+    &__carousel-inner,
+    &__carousel-item {
+      height: 100%;
+    }
+  }
+}
+
+.carousel-item__content {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  &--1 {
+    background-image: url("images/main-slider-1.jpg");
+    background-image: image-set(
+      url("images/main-slider-1.jpg") 1x,
+      url("images/main-slider-1@2x.jpg") 2x
+    );
+  }
+  &--2 {
+    background-image: url("images/main-slider-2.jpg");
+    background-image: image-set(
+      url("images/main-slider-2.jpg") 1x,
+      url("images/main-slider-2@2x.jpg") 2x
+    );
+  }
+  &--3 {
+    background-image: url("images/main-slider-3.jpg");
+    background-image: image-set(
+      url("images/main-slider-3.jpg") 1x,
+      url("images/main-slider-3@2x.jpg") 2x
+    );
+  }
+}
+
+.about-us {
+  position: relative;
+  @include media(from_laptop) {
+    margin: rem(2) 0;
+  }
+  &::after {
+    content: "";
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-image: url("images/kitchen.jpg");
+    background-image: image-set(
+      url("images/kitchen.jpg") 1x,
+      url("images/kitchen@2x.jpg") 2x
+    );
+    @include media(from_laptop) {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      bottom: 0;
+      left: 0;
+    }
+    @include media(to_laptop) {
+      padding: 33.35%; // 667 / 1000 * 50% (1000x667 - bg image size)
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: rem(60) 0;
+    @include media(desktop) {
+      padding: rem(170) 0;
+    }
+  }
+  &__col {
+    @include media(from_laptop) {
+      width: 50%;
+      padding-left: rem(70);
+    }
+  }
+  &__heading {
+    color: $primary;
+    margin-bottom: rem(15);
+  }
+  &__h2 {
+    margin-bottom: rem(30);
+  }
+  &__p {
+    margin-bottom: rem(30);
+  }
+}
+
+.reviews {
+  background: $blocks-bg;
+  padding: rem(115) 0;
+  &__content {
+    text-align: center;
+    @include media(desktop) {
+      max-width: rem(600);
+      margin: 0 auto;
+    }
+  }
+  &__heading {
+    color: $primary;
+  }
+  &__h3 {
+    margin: rem(15) 0 rem(25);
+  }
+  &__carousel {
+    font-size: rem(18);
+    line-height: rem(32);
+    margin-bottom: rem(35);
+  }
+}
+
+.gallery {
+  padding: rem(90) 0 rem(100);
+  text-align: center;
+  &__h3 {
+    margin-bottom: rem(40);
+  }
+  &__photos {
+    display: flex;
+    justify-content: center;
+    gap: rem(20);
+    margin-bottom: rem(40);
+    @include media(from_laptop) {
+      &-img {
+        max-width: 100%;
+      }
+    }
+    @include media(to_laptop) {
+      flex-wrap: wrap;
+    }
+  }
+}

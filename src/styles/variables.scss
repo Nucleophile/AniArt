@@ -1,0 +1,33 @@
+// Breakpoints
+$tablet: rem(768);
+$laptop: rem(1024);
+$desktop: rem(1360);
+
+// Colors
+$primary: #d4b254;
+$primary-hover: #c8a74b;
+$text-color: #777;
+$heading-color: #222;
+$btn-outlined-hover-color: $text-color;
+$blocks-bg: #eee;
+$mob-menu-bg: $heading-color;
+
+// Various dimensions
+$grid-gutter: rem(20);
+$tablet-content: rem(704);
+$tablet-container: $tablet-content + $grid-gutter * 2;
+$laptop-content: rem(904);
+$laptop-container: $laptop-content + $grid-gutter * 2;
+$desktop-content: rem(1300);
+$desktop-container: $desktop-content + $grid-gutter * 2;
+$header-vertical-padd: rem(30);
+$header-logo-width: rem(84);
+$header-logo-height: rem(33);
+$header-btn-cart-icon-height: rem(16);
+$btn-smaller-vertical-padd: rem(15);
+$mob-menu-btn-width: rem(30);
+$mob-menu-btn-height: rem(24);
+$mob-menu-btn-lines-height: rem(2);
+
+//Transitions
+$trans-dur: .3s;
